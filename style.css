@@ -1098,6 +1098,7 @@ footer {
     box-shadow: var(--glow-yellow);
     opacity: 0;
     pointer-events: none;
+    bottom: 2rem;
 }
 
 .scroll-top.visible {
@@ -1278,27 +1279,34 @@ footer {
         padding: 2rem;
     }
     
-    .schedule-timeline {
-        padding-left: 2rem;
-    }
-    
-    /* Reset to single column on mobile */
-    .schedule-timeline::before {
-        left: 0;
-        transform: none;
-    }
-    
-    .timeline-item,
-    .timeline-item:nth-child(even) {
-        justify-content: flex-start;
-        padding-left: 2rem;
-        padding-right: 0;
-    }
-    
-    .timeline-item::before {
-        left: -2.5rem;
-        transform: none;
-    }
+    /* ===== MOBILE TIMELINE FIX ===== */
+.schedule-timeline {
+    padding-left: 1.5rem;
+}
+
+.schedule-timeline::before {
+    left: 1rem;
+    transform: none;
+}
+
+.timeline-item,
+.timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-left: 2.5rem;
+    padding-right: 0;
+}
+
+.timeline-item::before {
+    left: 1rem;
+    top: 30px;
+    transform: translateX(-50%);
+}
+
+.timeline-content {
+    max-width: 100%;
+    width: 100%;
+}
+
     
     .timeline-item:nth-child(odd) .timeline-content:hover,
     .timeline-item:nth-child(even) .timeline-content:hover {
@@ -1461,8 +1469,55 @@ footer {
         font-size: 2.5rem;
     }
 }
-.student-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+@media (max-width: 768px) {
+
+    #problems,
+    #demo {
+        padding-bottom: 120px;
+    }
+
 }
+.instagram-float {
+    position: fixed;
+    left: 20px;
+    bottom: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: all var(--transition-medium);
+    border: none;
+    cursor: pointer;
+
+    background: radial-gradient(circle at 30% 30%, 
+        #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    box-shadow: 0 4px 20px rgba(214, 41, 118, 0.4);
+}
+
+
+.instagram-float:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 30px rgba(214, 41, 118, 0.6);
+}
+
+@media (max-width: 768px) {
+
+    .instagram-float{
+        bottom: 20px;
+    }
+    .whatsapp-float {
+        bottom: 20px;
+        right: 15px;
+    }
+
+    .scroll-top {
+        right: 15px;
+        bottom: 90px;
+    }
+
+}
+
+

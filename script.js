@@ -493,3 +493,16 @@ document.querySelectorAll('a:not([target="_blank"])').forEach(link => {
 
 console.log('🎉 CodeWave 2026 - Website Loaded Successfully!');
 console.log('Built with ❤️ for innovation and excellence');
+
+    // ===== DEMO SUBMISSION DEADLINE =====
+    const deadline = new Date("March 10, 2026 23:59:00").getTime();
+    const now = new Date().getTime();
+    const demoBtn = document.getElementById("demoSubmitBtn");
+
+    if (now > deadline && demoBtn) {
+        demoBtn.innerHTML = "<span>Submission Closed</span>";
+        demoBtn.style.background = "#555";
+        demoBtn.style.cursor = "not-allowed";
+        demoBtn.style.pointerEvents = "none";
+        demoBtn.removeAttribute("href");
+    }
