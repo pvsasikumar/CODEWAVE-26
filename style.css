@@ -1519,5 +1519,47 @@ footer {
     }
 
 }
+/* ===== NAV CONTAINER ===== */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===== LOGO SECTION ===== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 0; /* remove negative spacing */
+}
+
+/* ===== LOGO IMAGE ===== */
+.logoo {
+    height: 45px;          /* Adjust size if needed */
+    width: auto;
+    object-fit: contain;
+    margin-left: -100px;
+}
+
+/* ===== CODEWAVE TEXT ===== */
+.logo-glow {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+    .logo {
+        margin-left: 0;
+    }
+
+    .logoo {
+        height: 38px;
+    }
+}
+
+
 
 
