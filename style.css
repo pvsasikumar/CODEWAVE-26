@@ -1561,29 +1561,66 @@ footer {
 }
 .powered-by {
     background: rgba(58, 26, 18, 0.4);
-    backdrop-filter: blur(10px);
-    padding: 1.2rem 2rem;
-    border-radius: 18px;
+    backdrop-filter: blur(8px);
+    padding: 2rem;
+    border-radius: 20px;
     border: 1px solid rgba(253, 187, 59, 0.2);
+    max-width: 800px;
+    margin: 60px auto;
     text-align: center;
-    width: 1000px;
-    margin: 0 auto;
+}
+.powered-by img {
+    max-width: 220px;   /* control size */
+    height: auto;
 }
 
-.powered-by img {
+.sponsor-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* allows wrap on mobile */
+}
+
+
+.sponsor-logos img {
+    size: 100px 50px;
     max-width: 180px;
 }
+@media (max-width: 768px) {
 
-/* ===== SRM TOP LEFT LOGO ===== */
+    .powered-by img {
+        max-width: 140px;  /* smaller for mobile */
+    }
+
+}
+
+
+
+
+/* ===== SRM LOGO SECTION ===== */
 .srm-top-logo {
-    position: absolute;
-    top: 100px;   /* adjust if needed */
-    left: 40px;
-    z-index: 999;
+    display: flex;
+    align-items: center;
+    margin-top: 100px; /* below navbar */
+    padding-left: 60px;
 }
 
 .srm-top-logo img {
-    height: 80px;     /* control size */
+    height: 85px;
     width: auto;
-    object-fit: contain;
 }
+@media (max-width: 768px) {
+
+    .srm-top-logo {
+        justify-content: center;   /* center logo */
+        padding-left: 0;
+        margin-top: 90px;
+    }
+
+    .srm-top-logo img {
+        height: 55px;   /* smaller logo */
+    }
+
+}
+
