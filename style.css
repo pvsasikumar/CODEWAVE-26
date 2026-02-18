@@ -1574,3 +1574,16 @@ footer {
     max-width: 180px;
 }
 
+/* ===== SRM TOP LEFT LOGO ===== */
+.srm-top-logo {
+    position: absolute;
+    top: 100px;   /* adjust if needed */
+    left: 40px;
+    z-index: 999;
+}
+
+.srm-top-logo img {
+    height: 80px;     /* control size */
+    width: auto;
+    object-fit: contain;
+}
