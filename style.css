@@ -200,7 +200,7 @@ nav.scrolled {
     justify-content: center;
     text-align: center;
     position: relative;
-    padding-top: 100px;
+    padding: 120px 0 60px;
 }
 
 .hero-content {
@@ -1536,10 +1536,10 @@ footer {
 
 /* ===== LOGO IMAGE ===== */
 .logoo {
-    height: 45px;          /* Adjust size if needed */
+    height: 45px;
     width: auto;
     object-fit: contain;
-    margin-left: -100px;
+    margin-left: 0;
 }
 
 /* ===== CODEWAVE TEXT ===== */
@@ -1550,15 +1550,6 @@ footer {
 }
 
 /* ===== MOBILE FIX ===== */
-@media (max-width: 768px) {
-    .logo {
-        margin-left: 0;
-    }
-
-    .logoo {
-        height: 38px;
-    }
-}
 .powered-by {
     background: rgba(58, 26, 18, 0.4);
     backdrop-filter: blur(8px);
@@ -1584,9 +1575,12 @@ footer {
 
 
 .sponsor-logos img {
-    size: 100px 50px;
+    width: 120px;
+    height: 60px;
+    object-fit: contain;
     max-width: 180px;
 }
+
 @media (max-width: 768px) {
 
     .powered-by img {
@@ -1602,8 +1596,9 @@ footer {
 .srm-top-logo {
     display: flex;
     align-items: center;
-    margin-top: 100px; /* below navbar */
-    padding-left: 60px;
+    justify-content: center;
+    margin-top: 90px;
+    padding-left: 0;
 }
 
 .srm-top-logo img {
